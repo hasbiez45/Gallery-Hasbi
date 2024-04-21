@@ -8,7 +8,6 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\CommentController;
-use App\Http\Controllers\LikedPhotoController;
 
 
 /*
@@ -46,7 +45,6 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/photos/{photo}/comments', [CommentController::class, 'store'])->name('comments.store');
 
-    Route::get('/liked-photo', [LikedPhotoController::class, 'index']);
 });
 
 // Rute login dan logout
